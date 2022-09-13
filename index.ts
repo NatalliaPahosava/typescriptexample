@@ -31,5 +31,27 @@ function findIndex(index:number,arr:number[]):number{
 }
 // console.log(findIndex(1,NumberOfStudents))
 
+function log(msg:any): void {
+    console.log(msg)
+}
+
 let finalNumber:number =findIndex(1,NumberOfStudents)
-console.log(finalNumber+1)
+// log(finalNumber+1)
+const complexObject: any ={name:"Damian", height:'yes please',age:49}
+
+interface human{
+    name:string,
+    height:string,
+}
+interface Teacher extends human{
+    age:number,
+    weight?:string
+}
+const complexObject2: Teacher ={name:"Damian", height:'yes please',age:49}
+
+function displayteacher(teacher:Teacher): string{
+return `This teacher is ${teacher.age} old`
+}
+console.log(displayteacher(complexObject2))
+
+console.log(complexObject2)
